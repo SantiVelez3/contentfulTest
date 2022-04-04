@@ -1,0 +1,10 @@
+<div class="bg-dark text-light" style="padding:50px; margin:50px; border-radius: 20px;" *ngIf="this.course.fields">
+    <a href="{{this.course.fields.url}}" target="_blank"><img src="{{course.fields.courseImg.fields.file.url}}" alt="courseImg" class="float-right rounded" width="40%" style="margin: 10px;"> </a>
+    <h2><a href="{{course.fields.url}}" target="_blank">  {{course.fields.title}} </a></h2>
+    <em>by {{course.fields.author}}</em>
+    <br> <br>
+    <div class=""> {{course.fields.description}} </div>
+    <div class=""> {{course.fields.longDescription}} </div>
+    <a href="{{course.fields.url}}" target="_blank" class="btn btn-success"> Go To Course</a>
+    <a [routerLink]="[ '/courses' ]" class="btn btn-danger">Back to List</a>
+</div>
